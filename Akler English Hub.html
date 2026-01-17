@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akler English Hub | Kindergarten & Scratch</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="165133668_60x60.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .scratch-orange { background-color: #ffab19; }
+        .scratch-blue { background-color: #4d97ff; }
+        .tap-circle { transition: all 0.2s; cursor: pointer; }
+        .tap-circle:active { transform: scale(0.9); background-color: #4d97ff; color: white; }
+        .alphabet-card { transition: all 0.3s ease; }
+        .alphabet-card:hover { transform: translateY(-5px); border-color: #f97316; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white py-12 px-6 text-center shadow-lg">
+        <h1 class="text-4xl font-extrabold mb-2 uppercase tracking-tight">Akler English Hub</h1>
+        <p class="text-xl opacity-90 text-blue-100 font-medium">From Kindergarten Lessons to Scratch Studios</p>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-6 space-y-12">
+
+        <!-- Kindergarten Section -->
+        <section id="kindergarten" class="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200">
+            <div class="bg-green-500 p-4 text-white font-bold text-lg">
+                🌱 Learn Kindergarten Learning Map
+            </div>
+            <div class="p-8 grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-green-700">Learn English Foundations</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li><strong>Learn Phonics:</strong> Letter sounds & blending.</li>
+                        <li><strong>Learn Concepts:</strong> Reading left to right.</li>
+                        <li><strong>Learn Writing:</strong> Forming letters.</li>
+                    </ul>
+                </div>
+                <div class="bg-green-50 rounded-xl p-6 border border-green-100">
+                    <h4 class="font-bold text-green-800 mb-3 text-sm uppercase tracking-wider">Learn Core Vocabulary</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white px-3 py-1 rounded-full text-xs border border-green-200">Learn Sight Words</span>
+                        <span class="bg-white px-3 py-1 rounded-full text-xs border border-green-200">Learn Rhyming</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section with Custom Logic -->
+        <section id="download" class="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200">
+            <div class="bg-blue-800 p-4 text-white font-bold text-lg">
+                📩 Learn: The Download Map
+            </div>
+            <div class="p-8">
+                <div id="form-container">
+                    <p class="text-sm text-slate-600 mb-6">Fill in the map below to receive your PDF!</p>
+                    <form id="pdfForm" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Your Name</label>
+                            <input type="text" id="userName" required class="w-full border p-2 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Email Address</label>
+                            <input type="email" id="userEmail" required class="w-full border p-2 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Send for who?</label>
+                            <select id="recipient" class="w-full border p-2 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                                <option value="you">For You</option>
+                                <option value="your kid">For Your Kid</option>
+                                <option value="your sibling">For Your Sibling</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all shadow-md uppercase tracking-widest text-sm">
+                            Send My PDF 🚀
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Success Message (Hidden by default) -->
+                <div id="success-message" class="hidden text-center py-10 space-y-4">
+                    <div class="text-5xl mb-4 text-green-500">✅</div>
+                    <h2 class="text-2xl font-bold text-slate-800" id="msg-congrats"></h2>
+                    <p class="text-slate-600 font-medium" id="msg-enjoy"></p>
+                    <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-sm text-blue-800">
+                        If any questions, comment on <strong>Akler English Hub</strong>
+                    </div>
+                    <button onclick="location.reload()" class="text-xs text-slate-400 underline">Send another?</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scratch Studio -->
+        <section id="scratch" class="bg-white rounded-2xl shadow-md p-10 text-center border border-slate-200">
+            <h2 class="text-3xl font-bold mb-4 text-slate-800">Akler Scratch Studio</h2>
+            <div class="mb-6 flex justify-center">
+                <!-- Placeholder for QR Code -->
+                <div class="w-32 h-32 bg-slate-100 border-2 border-dashed border-slate-300 rounded-lg flex items-center justify-center text-[10px] text-slate-400 p-2 text-center">
+                    Place your QR Code here
+                </div>
+            </div>
+            <a href="https://scratch.mit.edu/studios/51246806" target="_blank" class="scratch-orange hover:bg-orange-500 text-white text-xl font-black py-4 px-10 rounded-full transition-all inline-block shadow-lg uppercase">
+                Join Studio 🚀
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-10 text-slate-400 text-xs">
+        <p>© 2026 Akler English Hub</p>
+    </footer>
+
+    <script>
+        document.getElementById('pdfForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('userEmail').value;
+            const recipient = document.getElementById('recipient').value;
+            
+            // Map the pronoun logic
+            let pronoun = (recipient === "you") ? "you" : (recipient === "your kid" ? "your kid" : "your sibling");
+
+            // Hide form, show message
+            document.getElementById('form-container').classList.add('hidden');
+            const success = document.getElementById('success-message');
+            success.classList.remove('hidden');
+
+            // Set the custom text
+            document.getElementById('msg-congrats').innerText = `Congratulations ${email}! You have downloaded it.`;
+            document.getElementById('msg-enjoy').innerText = `I hope ${pronoun} will enjoy it!`;
+        });
+    </script>
+</body>
+</html>
