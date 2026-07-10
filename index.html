@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minesweeper</title>
+    <link rel="icon" type="image/png" href="Spike.png" />
+    <link rel="stylesheet" href="ms.css" />
+  </head>
+  <body>
+    <div id="game-window">
+      <div id="game-header">
+        <div id="mine-counter" class="digital-display">010</div>
+        <img id="face-btn" src="Happy.png" alt="Face" />
+        <div id="timer" class="digital-display">000</div>
+      </div>
+      <div id="board-container">
+        <canvas id="mscanvas"></canvas>
+      </div>
+      <button id="restart-btn">RESTART GAME</button>
+    </div>
+
+    <div style="display: none">
+      <img id="tile-normal" src="Normal Tile.png" />
+      <img id="tile-clicked" src="Clicked Tile.png" />
+      <img id="tile-spike" src="Spike.png" />
+      <img id="face-happy" src="Happy.png" />
+      <img id="face-sad" src="Sad.png" />
+    </div>
+    <script src="ms.js"></script>
+  </body>
+</html>

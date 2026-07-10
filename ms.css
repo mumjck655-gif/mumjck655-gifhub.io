@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'ByteBounce';
+    src: url('ByteBounce.ttf') format('truetype'),
+         url('ByteBounce.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'ByteBounce', 'Courier New', monospace; 
+    color: #ffffff;
+    user-select: none;
+}
+
+#game-window {
+    background-color: #333333;
+    padding: 10px;
+    display: inline-block;
+    border: 2px solid #ffffff; 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+#game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222222;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border: 2px solid #ffffff;
+}
+
+.digital-display {
+    font-size: 28px;
+    color: #ff3333;
+    background-color: #050505;
+    padding: 2px 8px;
+    border-radius: 3px;
+    min-width: 50px;
+    text-align: center;
+    letter-spacing: 2px;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+#face-btn {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    image-rendering: pixelated;
+    transition: transform 0.05s ease;
+}
+
+#face-btn:active {
+    transform: scale(0.92);
+}
+
+#board-container {
+    display: block;
+    border: 2px solid #ffffff;
+    background-color: #000000;
+}
+
+canvas {
+    display: block;
+    image-rendering: pixelated;
+}
+
+#restart-btn {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px 0;
+    background-color: #222222;
+    color: #ffffff;
+    font-family: 'ByteBounce', 'Courier New', monospace;
+    font-size: 22px;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background-color 0.1s ease;
+}
+
+#restart-btn:hover {
+    background-color: #444444;
+}
+
+#restart-btn:active {
+    background-color: #111111;
+}
